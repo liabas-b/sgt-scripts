@@ -1,5 +1,11 @@
 #SGT docker like a BOSS
 
+         _ _         _            _
+ ___  __| | |_    __| | ___   ___| | _____ _ __
+/ __|/ _` | __|  / _` |/ _ \ / __| |/ / _ \ '__|
+\__ \ (_| | |_  | (_| | (_) | (__|   <  __/ |
+|___/\__,_|\__|  \__,_|\___/ \___|_|\_\___|_|
+
 
 ##Start
 
@@ -10,7 +16,7 @@
 * Creates or migrates the database
 * Populates the database
 
-`sudo ./start_containers.sh -ti -e UPDATE=true -e POPULATE_DB=true`
+1. `sudo ./start_containers.sh -ti -e UPDATE=true -e POPULATE_DB=true`
 
 When the porcess is completed, and `Starting unicorn` is prompted, you can detach from the container using `ctrl+p ctrl+q`.
 Run with `-d` to directly detach without any output.
@@ -20,31 +26,31 @@ Run with `-d` to directly detach without any output.
 
 * Updates code with github
 
-`sudo ./stop_containers.sh`
-`sudo ./start_containers.sh -ti -e UPDATE=true -e POPULATE_DB=true`
+1. `sudo ./stop_containers.sh`
+2. `sudo ./start_containers.sh -ti -e UPDATE=true -e POPULATE_DB=true`
 
 
 ###Backup database
 
-`sudo ./stop_containers.sh`
-`sudo ./make_db_backup.sh`
-`sudo ./start_containers.sh`
+1. `sudo ./stop_containers.sh`
+2. `sudo ./make_db_backup.sh`
+3. `sudo ./start_containers.sh`
 
 
 ###Restore database backup
 
-`sudo ./stop_containers.sh`
-`sudo ./restore.sh`
+1. `sudo ./stop_containers.sh`
+2. `sudo ./restore.sh`
 
 
 ###Stop
 
-`sudo ./stop_containers.sh`
+1. `sudo ./stop_containers.sh`
 
 
 ###Start
 
-`sudo ./start_containers.sh`
+1. `sudo ./start_containers.sh`
 
 
-That's all :)
+That's all folks :)
